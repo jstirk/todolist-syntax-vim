@@ -29,7 +29,6 @@ hi def link todolistHeader    Structure
 hi def link todolistOpen      Normal
 hi def link todolistClosed    Comment
 hi def link todolistComment   Comment
-"hi def link todolistWords  Constant
 hi def link todolistTime      String
 hi def link todolistStory     Special
 hi def link todolistImportant Todo
