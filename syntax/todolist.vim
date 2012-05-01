@@ -13,12 +13,12 @@ syn match todolistPoints '(\d)'
 syn match todolistTime '(\(\d\+\(:\d\+\)\?[ap]m\)\? \?\([MTWFS][a-z]\+\)\?)'
 syn match todolistStory '\[\d\+\]'
 
-syn match todolistAction '\(Call|Email\)'
+syn match todolistAction '\(Call\|Email\)'
 syn match todolistProjectCode ' [A-Z]\{3\} '
-syn match todolistImportant '!!'
+syn match todolistImportant '\(!!\|(?\+)\)'
 syn match todolistDelegate '=> [A-Za-z]\+'
 
-syn match todolistOpen '\t\* .*' skipwhite contains=todolistPoints,todolistTime,todolistStory,todolistImportant,todolistDelegate,todolistProjectCode
+syn match todolistOpen '\t\* .*' skipwhite contains=todolistPoints,todolistTime,todolistStory,todolistImportant,todolistDelegate,todolistProjectCode,todolistAction
 syn match todolistClosed '\t- .*' skipwhite
 
 syn region todolistBlock start=/^[A-Z]+:/ end=/^$/ fold transparent contains=todolistWords,todolistOpen,todolistClosed,todolistHeader
